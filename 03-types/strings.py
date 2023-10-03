@@ -94,3 +94,13 @@ print("Coffee".ljust(16, ".") + "$1".rjust(4))
 
 print("Muffin".ljust(16, ".") + "$2".rjust(4))
 print("Cheesecake".ljust(16, ".") + "$4".rjust(4))
+
+print("")
+
+# String index values
+print(first[0])
+print(first[1])
+print(first[-1])  # Final value
+print(last[1:-1])  # Range of values (non-encapsulating)
+print(last[1:])  # Range w/o ending goes to end
+print(last[:-1])  # Range w/o start
