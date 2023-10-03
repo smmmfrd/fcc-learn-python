@@ -104,3 +104,7 @@ print(first[-1])  # Final value
 print(last[1:-1])  # Range of values (non-encapsulating)
 print(last[1:])  # Range w/o ending goes to end
 print(last[:-1])  # Range w/o start
+
+# Boolean Methods
+print(first.startswith("S"))
+print(first.endswith("X"))
