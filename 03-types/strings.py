@@ -82,3 +82,15 @@ print(len(multiline))
 print(len(multiline.strip()))
 print(len(multiline.lstrip()))
 print(len(multiline.rstrip()))
+# Build a menu
+print("")
+title = "menu".upper()
+
+# Center within 20 characters, surrounded by equals signs
+print(title.center(20, "="))
+
+# Left justify coffee by 16 spaces and fill rest of it's spaces with periods, then right justify dollar amount with none of it's spaces taken up by any characer.
+print("Coffee".ljust(16, ".") + "$1".rjust(4))
+
+print("Muffin".ljust(16, ".") + "$2".rjust(4))
+print("Cheesecake".ljust(16, ".") + "$4".rjust(4))
