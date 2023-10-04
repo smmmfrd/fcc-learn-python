@@ -17,7 +17,7 @@ playerinput = input("Enter...\n1 for Rock,\n2 for Paper,\n3 for Scissors:\n\n")
 
 playerchoice = int(playerinput)
 
-if playerchoice < 1 | playerchoice > 3:
+if playerchoice < 1 or playerchoice > 3:
     sys.exit("You must enter 1, 2, or 3.")
 
 computerinput = random.choice("123")
