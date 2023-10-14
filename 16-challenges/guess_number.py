@@ -45,9 +45,13 @@ def guessnumber(playername):
         else:
             print("\n🎉 🎉 🎉 🎉 ")
             print("Thank you for playing!\n")
-            sys.exit(f"Bye {playername}!")
 
-    return game()
+            if __name__ == "__main__":
+                sys.exit(f"Bye {playername}! 👋")
+            else:
+                return
+
+    return game
 
 
 if __name__ == "__main__":
@@ -67,5 +71,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    game = guessnumber(args.name)
-    game()
+    play_guess_number = guessnumber(args.name)
+    play_guess_number()
