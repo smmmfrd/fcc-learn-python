@@ -15,7 +15,16 @@ def index():
 def get_weather():
     city = str(request.args.get("city"))
 
+    # Fix empty strings
+    if not bool(city.strip()):
+        city = "Riverside"
+
     weather_data = get_current_weather(city)
+
+    # If it's not a successful request
+    if not weather_data["cod"] == 200:
+        return render_template("city-not-found.html")
+
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -26,4 +35,5 @@ def get_weather():
 
 
 if __name__ == "__main__":
+    print(f"Server running at: http://localhost:8080/")
     serve(app, host="0.0.0.0", port=8080)
